@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item ">
+                            <a href="" class="header__navbar-item-link header__navbar-item-link--separate">Kênh người
+                                bán</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link header__navbar-item-link--separate">Trở thanh
+                                người bán Shopee</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link  header__navbar-item-link--separate">Tải ứng dụng
+                            </a>
+                            <!--HEADER QR-->
+                            <div class="header__QR">
+                                <img src="./assets/img/qr.png" alt="" class="header__QR-img">
+                                <div class="header__QR-apps">
+                                    <a href="" class="header__QR-dowload-link">
+                                        <img src="./assets/img/appstore.png" alt="App Store" class="header__QR-dowload">
+                                    </a>
+
+                                    <a href="" class="header__QR-dowload-link">
+                                        <img src="./assets/img/goodleplay.png" alt="Goodle Play"
+                                            class="header__QR-dowload">
+                                    </a>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <span class="header__navbar-title-pointer">Kết nối</span>
+                                <a href="" class="header__navbar-icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="" class="header__navbar-icon"><i class="fa-brands fa-square-instagram"></i></a>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item-notify ">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="fa-regular fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <!--THÔNG BÁO-->
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới!</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,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"
+                                                alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mĩ phẩm chính hãng</span>
+                                                <span class="header__notify-dicriction">Mô tả mĩ phẩm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,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"
+                                                alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mĩ phẩm chính hãng</span>
+                                                <span class="header__notify-dicriction">Mô tả mĩ phẩm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,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"
+                                                alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mĩ phẩm chính hãng</span>
+                                                <span class="header__notify-dicriction">Mô tả mĩ phẩm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <footer class="header__notify-footer">
+                                        <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                    </footer>
+                                </ul>
+
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="fa-regular fa-circle-question"></i>
+                                Hỗ trợ
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="fa-thin fa-globe"></i>
+                                Ngôn ngữ
+                            </a>
+                        </li>
+                        <!-- <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link header__navbar-item-link--separate">Đăng ký</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">Đăng nhập</a>
+                        </li> -->
+                        <li class="header__navbar-item header__navbar-user">
+                            <img src="http://phunuvietnam.mediacdn.vn/media/news/33abffcedac43a654ac7f501856bf700/anh-profile-tiet-lo-g-ve-ban-1.jpg" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Cường Đoàn</span>
+                        </li>
+                    </ul>
+                </nav>
+                <!--header with search-->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <img src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-shopee-inkythuatso-2-01-24-14-52-10.jpg" alt="" class="header__logo-img">
+                    </div>
+                    <div class="header__search"> 
+                        <input type="text" class="header__search-input" placeholder="Đăng ký và nhận Voucher lên đến 70K">
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>  
+                    </div>
+                    <div class="header__carts">
+                        <di class="header__cart-wrap">
+                            <i class="header__carts-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__carts-notice"> 3 </span>
+                            <!--No cart : header__carts-list--no_carts-->
+                            <div class="header__carts-list  ">
+                                <img src="./assets/img/meo-cuoi-nham-hiem.jpg" alt="" class="header__carts-list--no_cart-img">
+                                <span class="header__cart-messege">Chưa có sản phẩm</span>
+                                <h4 class="header__cart-headeing">
+                                    Sản phẩm đã thêm
+                                </h4>
+                                <ul class="header__cart-list-item">
+                                    <!-- CART ITEM -->
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#" class="header__cart-view-cart btn btn--primery">
+                                    Xem giỏ hàng
+                                </a >
+                            </div>
+
+                        </di>
+                    </div>
+                </div>
+            
+            </div>
+        </header>
+
+    </header>
+    <div class="container">
+
+    </div>
+    <footer class="footer">
+
+    </footer>
+    <!--register form-->
+    <!-- <div class="modal">
+        <div class="modal__overplay">
+
+        </div>
+        <div class="modal__body">
+            <div class="modal__inner">
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <di class="auth-form__hedder">
+                            <h3 class="auth-form__hedding">Đăng ký</h3>
+                            <span class="auth-form__switch-btn">Đăng nhập</span>
+                        </di>
+                        <div class="auth-form__body">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                            </div>
+                        </div>
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                Bằng việc đăng ký , bạn đã đồng ý với Shoppe về
+                                <a href="" class="auth-form__policy-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__policy-link">Chính sách bảo mật</a>
+
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="auth-form__control">
+                <button class="btn btn--nomal auth-form__control-back"> Trở lại</button>
+                <button class="btn btn--primery"> Đăng ký</button>
+            </div>
+                <div class="auth-form-socials">
+                    <a href="" class="btn auth-form-socials-facebook btn--size-s btn-with-icon">
+                        <i class="auth-form-socials-icon fa-brands fa-square-facebook"></i>
+                       
+                        <span class="auth-form-socials-title">Kết nối với Facebook</span>
+                       
+                    </a>
+                    <a href="" class="btn auth-form-socials-goodle btn--size-s btn-with-icon">
+                        <i class="auth-form-socials-icon fa-brands fa-google"></i>
+                        <span class="auth-form-socials-title">Kết nối với Goodle</span>
+                    </a>
+                </div>
+           
+        </div>
+    </div> -->
+    <!--sign in form-->
+    <div class="modal">
+        <div class="modal__overplay">
+
+        </div>
+        <div class="modal__body">
+            <div class="modal__inner">
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <di class="auth-form__hedder">
+                            <h3 class="auth-form__hedding">Đăng nhập</h3>
+                            <span class="auth-form__switch-btn">Đăng ký</span>
+                        </di>
+                        <div class="auth-form__body">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu">
+                            </div>
+                           
+                        </div>
+                        <div class="auth-form__aside">
+                            <div class="auth-form__help">
+                                <a href="" class="auth-form__help-link  auth-form__help-forgot">Quên mật khẩu</a>
+                                <span class="auth__help-seperate"></span>
+                                <a href="" class="auth-form__help-link">Cần trợ giúp</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="auth-form__control">
+                <button class="btn btn--nomal auth-form__control-back"> Trở lại</button>
+                <button class="btn btn--primery"> ĐĂNG NHẬP</button>
+            </div>
+                <div class="auth-form-socials">
+                    <a href="" class="btn auth-form-socials-facebook btn--size-s btn-with-icon">
+                        <i class="auth-form-socials-icon fa-brands fa-square-facebook"></i>
+                       
+                        <span class="auth-form-socials-title">Kết nối với Facebook</span>
+                       
+                    </a>
+                    <a href="" class="btn auth-form-socials-goodle btn--size-s btn-with-icon">
+                        <i class="auth-form-socials-icon fa-brands fa-google"></i>
+                        <span class="auth-form-socials-title">Kết nối với Google</span>
+                    </a>
+                </div>
+           
+        </div>
+    </div>
+</body>
+
+</html>
