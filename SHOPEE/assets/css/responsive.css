@@ -1,0 +1,129 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 68px ;
+        --navbar-height:0px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header__sort-bar {
+        display: flex;
+    }
+    header__mobile-search {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .app__content {
+        padding-top: calc((var(--header-height)+ var(--header-sort-bar-height)));
+    }
+    .mobile-category {
+        display: block;
+        
+    }
+}
+
+/*  Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__carts {
+        width: 80px;
+        text-align: right;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    
+    .header__carts-list {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        padding:  0 calc((100% - 644px) / 2);
+    }
+    .header__carts-list::after {
+        display: none;
+    }
+    .header__mobile-search {
+        display: none;
+    }
+    .mobile-category__list{
+        margin-top: 100px;
+    }
+   
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header-with-search {
+        justify-content: space-between;
+        margin: 0;
+    padding: 0 13px;
+
+    }
+    .header__logo,.header__carts {
+        width: unset;
+    }
+   
+    .header__search {
+        position: fixed;
+        top: var(--header-height);
+        left: 36px;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        z-index: 1;
+        padding: 0 8px;
+        animation: mobileSearchSideIn linear 0.1s;
+        display: none;
+    }
+    .pagination-item__link{
+        --height: 28px;
+        font-size: 1.6rem;
+        min-width: 18px;
+    }
+    .app__content {
+        margin: 0 4px;
+        padding-top: 130px;
+    }
+    .header__mobile-search {
+       
+        display: block;
+    }
+    .mobile-category {
+       margin-top: 100px;
+     }
+    .footer__content {
+       padding: 0 20px;
+    }
+
+    
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+    
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
+
+}
