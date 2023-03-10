@@ -131,6 +131,12 @@ html {
     color: var(--white-color);
     background-color: var(--primary);
 }
+.btn-Add-Product {
+    width: 100%;
+   
+    display: none;
+    z-index: 30;
+}
 /*SELECT */
 .select-input {
     position: relative;
