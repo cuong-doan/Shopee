@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/details.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="app">
+        <header class="header">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item ">
+                            <a href="" class="header__navbar-item-link header__navbar-item-link--separate">Kênh người
+                                bán</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link header__navbar-item-link--separate">Trở thanh
+                                người bán Shopee</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link  header__navbar-item-link--separate">Tải ứng dụng
+                            </a>
+                            <!--HEADER QR-->
+                            <div class="header__QR">
+                                <img src="./assets/img/qr.png" alt="" class="header__QR-img">
+                                <div class="header__QR-apps">
+                                    <a href="" class="header__QR-dowload-link">
+                                        <img src="./assets/img/appstore.png" alt="App Store" class="header__QR-dowload">
+                                    </a>
+
+                                    <a href="" class="header__QR-dowload-link">
+                                        <img src="./assets/img/goodleplay.png" alt="Goodle Play"
+                                            class="header__QR-dowload">
+                                    </a>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <span class="header__navbar-title-pointer">Kết nối</span>
+                                <a href="" class="header__navbar-icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="" class="header__navbar-icon"><i class="fa-brands fa-square-instagram"></i></a>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item-notify ">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="fa-regular fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <!--THÔNG BÁO-->
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới!</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,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"
+                                                alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mĩ phẩm chính hãng</span>
+                                                <span class="header__notify-dicriction">Mô tả mĩ phẩm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,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"
+                                                alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mĩ phẩm chính hãng</span>
+                                                <span class="header__notify-dicriction">Mô tả mĩ phẩm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,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"
+                                                alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mĩ phẩm chính hãng</span>
+                                                <span class="header__notify-dicriction">Mô tả mĩ phẩm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <footer class="header__notify-footer">
+                                        <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                    </footer>
+                                </ul>
+
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="fa-regular fa-circle-question"></i>
+                                Hỗ trợ
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="fa-thin fa-globe"></i>
+                                Ngôn ngữ
+                            </a>
+                        </li>
+                        <!-- <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link header__navbar-item-link--separate">Đăng ký</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">Đăng nhập</a>
+                        </li> -->
+                        <li class="header__navbar-item header__navbar-user">
+                            <img src="http://phunuvietnam.mediacdn.vn/media/news/33abffcedac43a654ac7f501856bf700/anh-profile-tiet-lo-g-ve-ban-1.jpg"
+                                alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Cường Đoàn</span>
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đơn mua </a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!--header with search-->
+                <div class="header-with-search">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
+                        <a href="/SHOPEE/" class="header__logo-link">
+                            <img src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-shopee-inkythuatso-2-01-24-14-52-10.jpg"
+                                alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <input type="checkbox" name="" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+                    <div class="header__search ">
+                        <input type="text" class="header__search-input"
+                            placeholder="Đăng ký và nhận Voucher lên đến 70K">
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="header__carts">
+                        <di class="header__cart-wrap">
+                            <i class="header__carts-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__carts-notice"> 3 </span>
+                            <!--No cart : header__carts-list--no_carts-->
+                            <div class="header__carts-list  ">
+                                <img src="./assets/img/meo-cuoi-nham-hiem.jpg" alt=""
+                                    class="header__carts-list--no_cart-img">
+                                <span class="header__cart-messege">Chưa có sản phẩm</span>
+                                <h4 class="header__cart-headeing">
+                                    Sản phẩm đã thêm
+                                </h4>
+                                <ul class="header__cart-list-item">
+                                    <!-- CART ITEM -->
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587"
+                                            alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Toner AHA BHA Home Peeling Liqiud
+                                                    ReasonAbeauty Toner Tẩy Da Chết Thu Nhỏ Lỗ Chân Lông Dung tích 150ml
+                                                    Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587"
+                                            alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587"
+                                            alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587"
+                                            alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587"
+                                            alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/419/948/products/thiet-ke-chua-co-ten.png?v=1661282650587"
+                                            alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kem trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-price">300.000đ</span>
+                                                    <span class="header__cart-mutiply">x</span>
+                                                    <span class="header__cart-qnt">2</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-decription">
+                                                    Phân loại : Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#" class="header__cart-view-cart btn btn--primery">
+                                    Xem giỏ hàng
+                                </a>
+                            </div>
+
+                        </di>
+                    </div>
+                    <ul class="header__sort-bar">
+                        <li class="header__sort-item">
+                            <a href="" class="header__sort-link">
+                                Liên quan
+                            </a>
+                        </li>
+                        <li class="header__sort-item">
+                            <a href="" class="header__sort-link header__sort--active">
+                                Mới nhất
+                            </a>
+                        </li>
+                        <li class="header__sort-item">
+                            <a href="" class="header__sort-link">
+                                Bán chạy
+                            </a>
+                        </li>
+                        <li class="header__sort-item">
+                            <a href="" class="header__sort-link">
+                                Giá
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </header>
+    <div class="app__details">
+        <div class="grid wide">
+            <div class="row sm-gutter app__content">
+                <div class="details-body">
+                    <div class="col  l-4 ">
+                        <div class="img-product-full">
+    
+                            <div class="img-product"
+                                style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqqMfAVKh351WTXloqFHogJG8MFDvHg8lki4BT81fKAR3jrdsUoh4-4rS3ZFH2waCsDQ0&usqp=CAU);">
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col  l-8 ">
+                        <div class="details-product">
+                            <span class="title-product">
+                                Toner AHA BHA Home Peeling Liqiud ReasonAbeauty Toner Tẩy Da Chết Thu Nhỏ Lỗ Chân Lông Dung
+                                tích 150ml
+                            </span>
+                            <ul class="details-product-vote__list">
+                                <li class="details-product-vote__item">
+                                    <span class="details-product-vote__item-star">
+                                        4.9
+                                        <i class="details-product-vote__icon fa-solid fa-star"></i>
+                                        <i class="details-product-vote__icon fa-solid fa-star"></i>
+                                        <i class="details-product-vote__icon fa-solid fa-star"></i>
+                                        <i class="details-product-vote__icon fa-solid fa-star"></i>
+                                        <i class="details-product-vote__icon fa-solid fa-star"></i>
+                                    </span>
+                                </li>
+                                <li class="details-product-vote__item">
+                                    <span class="details-product-vote__item-voting">
+                                        499 Đánh giá
+                                    </span>
+                                </li>
+                                <li class="details-product-vote__item">
+                                    <span class="details-product-vote__item-sold">
+                                        1,3k Đã bán
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="details-product__price">
+                                <span class="details-product__price-initial">
+                                    1.186.000đ
+                                </span>
+                                <span class="details-product__price-final">
+                                    738.000đ
+                                </span>
+    
+                            </div>
+    
+                            <div class="details-product-set-up">
+                                <div class="details-product-set-up__item">
+                                    <div class="details-product-set-up__item-lb">
+    
+                                        <label for="" class="details-product-set-up__item-label">
+                                            Mã giảm giá của shop
+                                        </label>
+                                    </div>
+                                    <div class="details-product-set-up__item-voucher">
+                                        <span class="details-product-set-up__item-voucher-text">
+                                            Giảm đ30k
+                                        </span>
+                                    </div>
+                                    <div class="details-product-set-up__item-voucher">
+                                        <span class="details-product-set-up__item-voucher-text">
+                                            Giảm đ30k
+                                        </span>
+                                    </div>
+                                    <div class="details-product-set-up__item-voucher">
+                                        <span class="details-product-set-up__item-voucher-text">
+                                            Giảm đ30k
+                                        </span>
+                                    </div>
+                                    <div class="details-product-set-up__item-voucher">
+                                        <span class="details-product-set-up__item-voucher-text">
+                                            Giảm đ30k
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="details-product-set-up__item">
+                                    <div class="details-product-set-up__item-lb">
+    
+                                        <label for="" class="details-product-set-up__item-label">
+                                            Deal sốc
+                                        </label>
+                                    </div>
+                                    <div class="details-product-set-up__item-content">
+                                        <span class="details-product-set-up__item-content-text">
+                                            Mua để nhận quà
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="details-product-set-up__item">
+                                    <div class="details-product-set-up__item-lb">
+    
+                                        <label for="" class="details-product-set-up__item-label">
+                                            Bảo hiểm
+                                        </label>
+                                    </div>
+                                    <div class="details-product-set-up__item-content">
+                                        <span class="details-product-set-up__item-content-text-non">
+                                            Bảo hiểm Quyền lợi tiêu dùng
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="details-product-set-up__item">
+                                    <div class="details-product-set-up__item-lb">
+    
+                                        <label for="" class="details-product-set-up__item-label">
+                                            Vận chuyển
+                                        </label>
+                                    </div>
+                                    <div class="details-product-set-up__item-content">
+                                        <div class="details-product-set-up__item-content-free-transport">
+                                            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/74f3e9ac01da8565c3baead996ed6e2a.png"
+                                                alt="" class="details-product-set-up__item-content-free-transport-icon">
+                                            <span class="details-product-set-up__item-content-free-transport-text">Miễn phí vận chuyển</span>
+                                        </div>
+                                        <div class="details-product-set-up__item-content-transport-address">
+                                            <i class="details-product-set-up__item-content-transport-address-icon fa-solid fa-truck-arrow-right"></i>
+                                            <div class="details-product-set-up__item-content-transport-address-icon-tab">
+                                                <div class="details-product-set-up__item-content-transport-to">
+                                                    <span class="details-product-set-up__item-content-transport-address-text">
+                                                        Vận chuyển tới
+                                                    </span>
+                                                </div>
+                                                <div class="details-product-set-up__item-content-transport-fee">                                   
+                                                    <span class="details-product-set-up__item-content-transport-fee-text">
+                                                        Phí vận chuyển
+                                                    </span>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details-product-set-up__item">
+                                    <div class="details-product-set-up__item-lb">
+                                        <label for="" class="details-product-set-up__item-label">
+                                            Số lượng
+                                        </label>
+                                    </div>
+                                    <div class="details-product-set-up__item-content">
+                                        <div class="details-product-set-up__item-content-quantity-product">
+                                            <button class="details-product-set-up__item-content-minus"> - </button>
+                                            <input type="text" class="details-product-set-up__item-content-quantity" value="1">
+    
+                                            <button class="details-product-set-up__item-content-plus"> + </button>
+                                            <span class="details-product-set-up__item-content-text-quantity">
+                                                265 sản phẩm có sẵn
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buy-details-product">
+                                    <button class="add-to-cart">
+                                        <i class="add-to-cart-icon fa-solid fa-cart-plus"></i>
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                    <button class=" btn btn--primery buy-now">Mua ngay</button>
+                                </div>
+                                <div class="ensure">
+                                    <a href="
+                                    " class="ensure-link"></a>
+                                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/83e10a1f95cb083579c089448ef8dd3b.png" alt="" class="ensure-img">
+                                    <span class="shopee-ensure">Shopee đảm bảo</span>
+                                    <span class="date-refund">3 ngày trả hàng / hoàn tiền </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="grid wide footer__content">
+            <div class="row">
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">
+                        Chăm sóc khách hàng
+                    </h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Shopee Blog</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Shopee Mall</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Hướng dẫn bán hàng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Vận chuyển</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Chăm sóc khách hàng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Chính sách bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">
+                        Về Shopee
+                    </h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Giới thiều về Shopee Việt Nam</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Tuyển dụng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Điều khoản Shopee</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Chính sách bảo mật</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Chính hãng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Chương trình tiếp thị liên kết Shopee</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">
+                        Thanh toán
+                    </h3>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">
+                        Theo dõi chúng tôi trên
+                    </h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-linkedin"></i>
+                                Linkedln
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <h3 class="footer__heading">
+                        Tải ứng dụng shoppe ngay thôi
+                    </h3>
+                    <div class="footer__download">
+                        <img src="./assets/img/qr.png" alt="" class="footer__download-pr">
+                        <div class="footer__download-apps">
+                            <a href="" class="footer__download-apps-link">
+                                <img src="./assets/img/appstore.png" alt="" class="footer__download-apps-img">
+                            </a>
+                            <a href="" class="footer__download-apps-link">
+                                <img src="./assets/img/goodleplay.png" alt="" class="footer__download-apps-img">
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="grid wide">
+                <p class="footer-text-end">
+                    Công ty TNHH Shopee
+                </p>
+
+                <p class="footer-text-end">
+                    Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình,
+                    Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>
