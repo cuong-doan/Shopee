@@ -4,6 +4,7 @@
     width: 100%;
     background-color: white;
     height: calc(100% - (--header-height));
+    margin-bottom: 20px;
 }
 .img-product-full{
     padding: 20px 20px;

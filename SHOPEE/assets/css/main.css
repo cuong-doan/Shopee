@@ -15,6 +15,10 @@
     margin: 7px;
     display: flex;
 }
+.header__navbar-list:first-child{
+   padding-left: 0;
+}
+
 .header__navbar-item{
     margin: 0 8px;
     position: relative;
@@ -450,6 +454,7 @@
     width: 140px;
    height: var(--header-with-search-height);
     color: var(--white-color);
+    margin-left: -36px;
 }
 .header__search {
     flex: 1;
